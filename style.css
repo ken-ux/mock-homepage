@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem;
+  margin: 0;
   gap: 8rem;
 }
 
@@ -37,15 +37,16 @@ h2 {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-header,
+/* header,
 main,
 footer {
   border: 1px solid red;
-}
+} */
 
 header {
   display: flex;
   align-items: center;
+  padding: 4rem 4rem 0;
 }
 
 header > div:first-child {
@@ -96,6 +97,7 @@ main {
 
 main h2 {
   margin-bottom: 1rem;
+  padding: 0 4rem;
 }
 
 main .icon {
@@ -106,6 +108,7 @@ main .icon {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 3rem;
+  padding: 0 4rem;
 }
 
 .project {
@@ -161,6 +164,9 @@ footer {
   width: 100%;
   display: flex;
   gap: 3rem;
+  padding: 4rem 0;
+  background-color: rgb(10, 145, 177);
+  color: white;
 }
 
 footer p {
@@ -169,6 +175,7 @@ footer p {
 
 footer .icon {
   height: 24px;
+  filter: invert(1);
 }
 
 footer .icons {
@@ -178,6 +185,7 @@ footer .icons {
 
 footer .icons .icon {
   height: 48px;
+  filter: none;
 }
 
 .inline-contact {
@@ -188,10 +196,12 @@ footer .icons .icon {
 
 footer > div {
   flex: 1;
+  padding-left: 4rem;
 }
 
 footer > img {
   min-width: 200px;
   flex: 2;
   object-fit: cover;
+  padding-right: 4rem;
 }
