@@ -37,15 +37,11 @@ h2 {
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
 }
 
-header,
-main,
-footer {
-  border: 1px solid red;
-}
-
 header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   margin: 4rem 4rem 0;
 }
 
@@ -91,6 +87,7 @@ header > div:last-child {
 header > div:last-child p {
   line-height: 1.5;
   font-size: 1.25rem;
+  color: slategrey;
 }
 
 header .icons {
@@ -167,6 +164,10 @@ main .icon {
   margin: 1rem 2rem 4rem;
 }
 
+.project-info p {
+  color: slategrey;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -220,17 +221,16 @@ footer > img {
 }
 
 @media (max-width: 768px) {
-  .bg-shape {
-    background-color: red;
-  }
-
-  header > div:first-child h1 {
-    top: 0;
-    right: 0;
-  }
-
   header {
-    flex-direction: column;
+    margin: 3rem 3rem 0;
+  }
+
+  header > div:first-child img {
+    max-width: 100%;
+  }
+
+  header > div:last-child {
+    padding: 3rem;
   }
 
   .wrapper {
@@ -243,12 +243,21 @@ footer > img {
 }
 
 @media (max-width: 480px) {
-  .bg-shape {
-    background-color: green;
-  }
-
   header {
     flex-direction: column;
+    margin: 2rem 2rem 0;
+  }
+
+  header > div:first-child h1 {
+    left: 24px;
+  }
+
+  header > div:last-child {
+    padding: 2rem;
+  }
+
+  header > div:last-child h2 {
+    text-align: center;
   }
 
   main h2 {
@@ -277,6 +286,10 @@ footer > img {
 
   footer > img {
     margin: 0;
+  }
+
+  footer p {
+    font-size: 1rem;
   }
 
   .inline-contact .icon {
