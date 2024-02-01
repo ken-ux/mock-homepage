@@ -1,4 +1,4 @@
-# homepage
+# mock-homepage
 
 This is a responsive homepage based on a design spec. The main purpose of this project was to practice responsive web design using CSS media queries. The mockup images for each screen size can be found in the `images` folder.
 
