@@ -34,19 +34,19 @@ h2 {
 }
 
 .shadow {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* header,
+header,
 main,
 footer {
   border: 1px solid red;
-} */
+}
 
 header {
   display: flex;
   align-items: center;
-  padding: 4rem 4rem 0;
+  margin: 4rem 4rem 0;
 }
 
 header > div:first-child {
@@ -68,12 +68,24 @@ header > div:first-child h1 {
   color: white;
 }
 
+.bg-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-color: rgb(10, 145, 177);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  z-index: -1;
+}
+
 header > div:last-child {
   flex: 1;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: white;
 }
 
 header > div:last-child p {
@@ -106,7 +118,7 @@ main .icon {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 3rem;
   padding: 0 4rem;
 }
@@ -163,7 +175,8 @@ main .icon {
 footer {
   width: 100%;
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  row-gap: 3rem;
   padding: 4rem 0;
   background-color: rgb(10, 145, 177);
   color: white;
@@ -196,12 +209,77 @@ footer .icons .icon {
 
 footer > div {
   flex: 1;
-  padding-left: 4rem;
+  margin: 0 4rem;
 }
 
 footer > img {
   min-width: 200px;
   flex: 2;
   object-fit: cover;
-  padding-right: 4rem;
+  margin: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .bg-shape {
+    background-color: red;
+  }
+
+  header > div:first-child h1 {
+    top: 0;
+    right: 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    padding: 0 3rem;
+  }
+
+  footer > div {
+    margin: 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-shape {
+    background-color: green;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  main h2 {
+    text-align: center;
+  }
+
+  .wrapper {
+    padding: 0 2rem;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
+
+  footer h2 {
+    text-align: center;
+  }
+
+  footer .icons {
+    justify-content: center;
+  }
+
+  footer > div {
+    margin: 0 2rem;
+  }
+
+  footer > img {
+    margin: 0;
+  }
+
+  .inline-contact .icon {
+    display: none;
+  }
 }
